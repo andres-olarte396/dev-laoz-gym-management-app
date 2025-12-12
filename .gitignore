@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.spec
+*.egg-info/
+.env
+.venv
+venv/
+
+# Node.js
+node_modules/
+dist/
+build/
+.env.local
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Frontend
+frontend/public/css/*.css.map
+
+# PyInstaller
+backend/build/
+backend/app/__pycache__/
+backend/app/api/__pycache__/
+backend/app/core/__pycache__/
+backend/app/models/__pycache__/
+
+# Otros
+*.sqlite3
+*.db
+
+# Documentación
+*.pdf
+*.docx
+*.xlsx
+
+# Archivos temporales
+*.tmp
+*.swp
+*.swo
+
+# Archivos de análisis de PyInstaller
+backend/build/GymApp/
+backend/build/GymApp/localpycs/
+backend/build/GymApp/*.toc
+backend/build/GymApp/*.pyz
+backend/build/GymApp/*.txt
+backend/build/GymApp/*.html
+
+# Archivos de configuración de sistema
+*.bak
+*.old
