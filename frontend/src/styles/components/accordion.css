@@ -1,0 +1,52 @@
+/* Importar Variables */
+@import url("theme.css");
+
+/* Accordion */
+.accordion {
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+    padding: var(--spacing-md);
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 0 !important;
+}
+
+.accordion-item {
+    border-top: var(--border-width) solid var(--color-border);
+    padding: var(--spacing-xs) var(--spacing-md) !important;
+    margin-bottom: 0 !important;
+}
+
+.accordion-item div {
+    margin-bottom: 0 !important;
+}
+
+.accordion-item:first-child {
+    border-top: none;
+}
+
+.accordion-header:hover {
+    background-color: var(--color-secondary);
+}
+
+.accordion-content {
+    display: none;
+    padding: var(--spacing-md);
+}
+
+.accordion-content a {
+    text-decoration: none;
+}
+
+.accordion-content a:hover {
+    text-decoration: underline;
+}
+
+.accordion-item.open .accordion-content {
+    display: block;
+}

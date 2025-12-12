@@ -1,0 +1,48 @@
+/* Importar Variables */
+@import url("theme.css");
+
+/* Tarjetas */
+.card {
+    background-color: var(--color-surface);
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    margin: var(--border-width);
+    box-shadow: var(--shadow-small);
+}
+
+.card div {
+    margin-bottom: 0 !important;
+}
+
+.card-name {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-base);
+    margin: var(--spacing-md) 0;
+}
+
+.card-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--font-size-small);
+    margin: 5px 0;
+    color: var(--color-text-secondary);
+}
+
+.card-code {
+    font-family: monospace;
+    font-size: var(--font-size-small);
+    color: var(--color-text-accent);
+}
+
+.card-link {
+    color: var(--color-primary);
+    font-size: var(--font-size-base);
+    text-decoration: none;
+    transition: color 0.3s var(--animation-ease);
+}
+
+.card-index {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+}

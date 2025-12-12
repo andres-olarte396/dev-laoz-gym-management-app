@@ -1,0 +1,494 @@
+/* ========================================
+   GymApp - Estilos Personalizados
+   Complemento a WaveArtCSS
+   ======================================== */
+
+/* Variables personalizadas para GymApp */
+:root {
+  /* Colores de marca */
+  --gym-primary: #2563EB;
+  --gym-primary-dark: #1E40AF;
+  --gym-secondary: #10B981;
+  --gym-accent: #F59E0B;
+  --gym-danger: #EF4444;
+  
+  /* Colores de estado */
+  --gym-success: #10B981;
+  --gym-warning: #F59E0B;
+  --gym-error: #EF4444;
+  --gym-info: #3B82F6;
+  
+  /* Grises */
+  --gym-gray-50: #F9FAFB;
+  --gym-gray-100: #F3F4F6;
+  --gym-gray-200: #E5E7EB;
+  --gym-gray-300: #D1D5DB;
+  --gym-gray-400: #9CA3AF;
+  --gym-gray-500: #6B7280;
+  --gym-gray-600: #4B5563;
+  --gym-gray-700: #374151;
+  --gym-gray-800: #1F2937;
+  --gym-gray-900: #111827;
+  
+  /* Espaciado */
+  --gym-spacing-xs: 0.25rem;
+  --gym-spacing-sm: 0.5rem;
+  --gym-spacing-md: 1rem;
+  --gym-spacing-lg: 1.5rem;
+  --gym-spacing-xl: 2rem;
+  --gym-spacing-2xl: 3rem;
+  
+  /* Bordes */
+  --gym-radius-sm: 0.375rem;
+  --gym-radius-md: 0.5rem;
+  --gym-radius-lg: 0.75rem;
+  --gym-radius-xl: 1rem;
+  --gym-radius-full: 9999px;
+  
+  /* Sombras */
+  --gym-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --gym-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --gym-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --gym-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  
+  /* Transiciones */
+  --gym-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --gym-transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --gym-transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========================================
+   Componentes Específicos de GymApp
+   ======================================== */
+
+/* Sidebar de Navegación */
+.gym-sidebar {
+  background: var(--gym-gray-900);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: width var(--gym-transition-base);
+}
+
+.gym-sidebar-header {
+  padding: var(--gym-spacing-lg);
+  border-bottom: 1px solid var(--gym-gray-700);
+}
+
+.gym-sidebar-nav {
+  flex: 1;
+  padding: var(--gym-spacing-md);
+  overflow-y: auto;
+}
+
+.gym-sidebar-footer {
+  padding: var(--gym-spacing-md);
+  border-top: 1px solid var(--gym-gray-700);
+}
+
+/* Botones de Navegación */
+.gym-nav-button {
+  display: flex;
+  align-items: center;
+  gap: var(--gym-spacing-md);
+  width: 100%;
+  padding: var(--gym-spacing-md) var(--gym-spacing-lg);
+  border-radius: var(--gym-radius-lg);
+  background: transparent;
+  color: var(--gym-gray-300);
+  border: none;
+  cursor: pointer;
+  transition: all var(--gym-transition-base);
+  margin-bottom: var(--gym-spacing-sm);
+}
+
+.gym-nav-button:hover {
+  background: var(--gym-gray-800);
+  color: white;
+}
+
+.gym-nav-button.active {
+  background: var(--gym-primary);
+  color: white;
+}
+
+/* Tarjetas de Estadísticas */
+.gym-stat-card {
+  background: white;
+  padding: var(--gym-spacing-lg);
+  border-radius: var(--gym-radius-lg);
+  box-shadow: var(--gym-shadow-md);
+  transition: all var(--gym-transition-base);
+}
+
+.gym-stat-card:hover {
+  box-shadow: var(--gym-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.gym-stat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--gym-spacing-md);
+}
+
+.gym-stat-card-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gym-gray-900);
+}
+
+.gym-stat-card-label {
+  font-size: 0.875rem;
+  color: var(--gym-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Tablas Mejoradas */
+.gym-table {
+  width: 100%;
+  background: white;
+  border-radius: var(--gym-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--gym-shadow-md);
+}
+
+.gym-table thead {
+  background: var(--gym-gray-50);
+}
+
+.gym-table th {
+  padding: var(--gym-spacing-md) var(--gym-spacing-lg);
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gym-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.gym-table td {
+  padding: var(--gym-spacing-md) var(--gym-spacing-lg);
+  border-top: 1px solid var(--gym-gray-200);
+}
+
+.gym-table tbody tr {
+  transition: background var(--gym-transition-fast);
+}
+
+.gym-table tbody tr:hover {
+  background: var(--gym-gray-50);
+}
+
+/* Badges */
+.gym-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--gym-spacing-xs) var(--gym-spacing-sm);
+  border-radius: var(--gym-radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.gym-badge-primary {
+  background: #DBEAFE;
+  color: #1E40AF;
+}
+
+.gym-badge-success {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.gym-badge-warning {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.gym-badge-danger {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+.gym-badge-purple {
+  background: #EDE9FE;
+  color: #5B21B6;
+}
+
+.gym-badge-gray {
+  background: #F3F4F6;
+  color: #374151;
+}
+
+/* Modales */
+.gym-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  animation: fadeIn var(--gym-transition-base);
+}
+
+.gym-modal {
+  background: white;
+  border-radius: var(--gym-radius-xl);
+  padding: var(--gym-spacing-xl);
+  max-width: 32rem;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--gym-shadow-xl);
+  animation: slideUp var(--gym-transition-base);
+}
+
+.gym-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--gym-spacing-lg);
+}
+
+.gym-modal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gym-gray-900);
+}
+
+.gym-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--gym-spacing-xs);
+  color: var(--gym-gray-500);
+  transition: color var(--gym-transition-fast);
+}
+
+.gym-modal-close:hover {
+  color: var(--gym-gray-900);
+}
+
+/* Formularios */
+.gym-form-group {
+  margin-bottom: var(--gym-spacing-lg);
+}
+
+.gym-form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gym-gray-700);
+  margin-bottom: var(--gym-spacing-sm);
+}
+
+.gym-form-input {
+  width: 100%;
+  padding: var(--gym-spacing-sm) var(--gym-spacing-md);
+  border: 1px solid var(--gym-gray-300);
+  border-radius: var(--gym-radius-md);
+  font-size: 1rem;
+  transition: all var(--gym-transition-fast);
+}
+
+.gym-form-input:focus {
+  outline: none;
+  border-color: var(--gym-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.gym-form-select {
+  width: 100%;
+  padding: var(--gym-spacing-sm) var(--gym-spacing-md);
+  border: 1px solid var(--gym-gray-300);
+  border-radius: var(--gym-radius-md);
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: all var(--gym-transition-fast);
+}
+
+.gym-form-select:focus {
+  outline: none;
+  border-color: var(--gym-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.gym-form-checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: var(--gym-radius-sm);
+  border: 1px solid var(--gym-gray-300);
+  cursor: pointer;
+}
+
+/* Botones */
+.gym-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gym-spacing-sm);
+  padding: var(--gym-spacing-sm) var(--gym-spacing-lg);
+  border-radius: var(--gym-radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all var(--gym-transition-base);
+}
+
+.gym-button-primary {
+  background: var(--gym-primary);
+  color: white;
+}
+
+.gym-button-primary:hover {
+  background: var(--gym-primary-dark);
+}
+
+.gym-button-secondary {
+  background: var(--gym-gray-200);
+  color: var(--gym-gray-800);
+}
+
+.gym-button-secondary:hover {
+  background: var(--gym-gray-300);
+}
+
+.gym-button-danger {
+  background: var(--gym-danger);
+  color: white;
+}
+
+.gym-button-danger:hover {
+  background: #DC2626;
+}
+
+.gym-button-icon {
+  padding: var(--gym-spacing-sm);
+  border-radius: var(--gym-radius-md);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--gym-gray-600);
+  transition: all var(--gym-transition-fast);
+}
+
+.gym-button-icon:hover {
+  background: var(--gym-gray-100);
+  color: var(--gym-gray-900);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utilidades Responsivas */
+@media (max-width: 768px) {
+  .gym-sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+  
+  .gym-modal {
+    width: 95%;
+    padding: var(--gym-spacing-lg);
+  }
+  
+  .gym-table {
+    font-size: 0.875rem;
+  }
+  
+  .gym-table th,
+  .gym-table td {
+    padding: var(--gym-spacing-sm);
+  }
+}
+
+/* Modo Oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --gym-gray-50: #111827;
+    --gym-gray-100: #1F2937;
+    --gym-gray-900: #F9FAFB;
+  }
+  
+  .gym-stat-card,
+  .gym-table,
+  .gym-modal {
+    background: var(--gym-gray-800);
+    color: white;
+  }
+  
+  .gym-form-input,
+  .gym-form-select {
+    background: var(--gym-gray-700);
+    border-color: var(--gym-gray-600);
+    color: white;
+  }
+}
+
+/* Clases de Utilidad Adicionales */
+.gym-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gym-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gym-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gym-spacing-lg);
+}
+
+.gym-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gym-spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .gym-grid-2,
+  .gym-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}

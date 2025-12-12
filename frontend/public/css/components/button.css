@@ -1,0 +1,34 @@
+/* Importar Variables */
+@import url("theme.css");
+
+/* Botones */
+button {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    cursor: pointer;
+    transition: background-color 0.3s var(--animation-ease),
+        transform 0.2s var(--animation-ease);
+}
+
+button:hover {
+    background-color: var(--color-secondary);
+    transform: scale(0.9);
+}
+
+button:disabled {
+    background-color: var(--color-text-muted);
+    cursor: not-allowed;
+}
+
+button:active {
+    transform: scale(1.1);
+}
+
+button:focus {
+    border: var(--border-width) solid var(--color-accent);
+}

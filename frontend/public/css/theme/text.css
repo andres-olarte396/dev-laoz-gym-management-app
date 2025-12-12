@@ -1,0 +1,27 @@
+:root {
+    /* --- Tipografía --- */
+    --font-family-primary: 'Inter', sans-serif;
+    /* Fuente principal */
+    --font-family-secondary: 'Roboto', sans-serif;    
+  
+    /* Fuente secundaria */
+    --font-size-xxs: 10px;
+    /* Fuente secundaria */
+    --font-size-xs: 12px;
+    /* Fuente secundaria */
+    --font-size-small: 14px;
+    /* Texto pequeño */
+    --font-size-base: 16px;
+    /* Texto base */
+    --font-size-large: 18px;
+    /* Texto grande */
+    --font-size-title: 24px;
+    /* Títulos */
+    --font-size-heading: 32px;
+    
+    /* Encabezados principales */
+    --line-height-base: 1.5;
+    /* Altura de línea predeterminada */
+    --line-height-heading: 1.2;
+    /* Altura de línea para títulos */
+}  

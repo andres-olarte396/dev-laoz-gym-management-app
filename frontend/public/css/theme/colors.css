@@ -1,0 +1,88 @@
+/* --- Paleta de Colores --- */
+:root {
+    /* Colores de Marca */
+    --color-primary: #3b82f6;
+    /* Azul vibrante */
+    --color-secondary: #6366f1;
+    /* Violeta vibrante */
+    --color-tertiary: #8b5cf6;    
+    /* Violeta moderno */
+    --color-accent: #f59e0b;
+    /* Amarillo acento */
+
+    --color-success: #10b981;
+    /* Verde éxito */
+    --color-warning: #fbbf24;
+    /* Amarillo advertencia */
+    --color-error: #ef4444;
+    /* Rojo error */
+    --color-info: #2563eb;
+    /* Azul info */
+
+    /* Fondos */
+    --color-background: #ffffff;
+    /* Fondo general (modo claro) */
+    --color-surface: #f9fafb;
+    /* Fondo de superficies claras */
+    --color-overlay: rgba(0, 0, 0, 0.5);
+    /* Fondos superpuestos */
+
+    /* Texto */
+    --color-text-primary: #111827;
+    /* Texto principal */
+    --color-text-secondary: #4b5563;
+    /* Texto secundario */
+    --color-text-muted: #9ca3af;
+    /* Texto desactivado */
+    --color-text-accent: #04315c;
+    /* Texto destacado */
+
+    /* Bordes */
+    --color-border: #d1d5db;
+    /* Color de bordes */
+    /* Sombras */
+    --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra predeterminada */
+}
+
+/* Tema Oscuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary: #60a5fa;
+        /* Azul claro */
+        --color-secondary: #818cf8;
+        /* Violeta claro */
+        --color-tertiary: #d1d5db;
+        /* Gris claro */
+        --color-accent: #fbbf24;
+        /* Amarillo vibrante */
+
+        --color-success: #34d399;
+        /* Verde éxito claro */
+        --color-warning: #fcd34d;
+        /* Amarillo advertencia claro */
+        --color-error: #f87171;
+        /* Rojo error claro */
+        --color-info: #3b82f6;
+        /* Azul info claro */
+
+        --color-background: #111827;
+        /* Fondo general oscuro */
+        --color-surface: #1f2937;
+        /* Fondo de superficies oscuras */
+        --color-overlay: rgba(255, 255, 255, 0.1);
+        /* Fondos superpuestos oscuros */
+        --color-text-primary: #f9fafb;
+        /* Texto principal claro */
+        --color-text-secondary: #9ea1a3;
+        /* Texto secundario claro */
+        --color-text-muted: #6b7280;
+        /* Texto desactivado claro */
+        --color-text-accent: #0b84f5;
+        /* Texto destacado */
+        --color-border: #374151;
+        /* Color de bordes oscuros */
+        --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        /* Sombra en modo oscuro */
+    }
+}

@@ -1,0 +1,33 @@
+/* Importar Variables */
+@import url("theme.css");
+
+/*Fieldset*/
+fieldset {
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+fieldset form {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+fieldset legend {
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+    padding: 0 var(--spacing-xs);
+}
+
+fieldset div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+fieldset div label {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}

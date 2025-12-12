@@ -1,0 +1,38 @@
+/* --- THEME.CSS --- */
+
+/* VARIABLES BASE PARA Wave Art CSS */
+
+/* Importar Variables */
+
+/* --- Paleta de Colores --- */
+@import url("theme/colors.css");
+/* --- Texto --- */
+@import url("theme/text.css");
+/* --- Espaciado --- */
+@import url("theme/spacing.css");
+
+
+:root {
+  /* --- Animaciones --- */
+  --animation-duration: 0.3s;
+  /* Duración por defecto */
+  --animation-ease: ease-in-out;
+  /* Curva de animación predeterminada */
+
+  /* Ejemplo de Animación Keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* --- Diseño Modular y Personalización --- */
+  --grid-gap: 16px;
+  /* Espaciado entre elementos de un grid */
+  --container-max-width: 1200px;
+  /* Ancho máximo del contenedor */
+}

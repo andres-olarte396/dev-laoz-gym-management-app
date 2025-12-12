@@ -1,0 +1,39 @@
+/* Importar Variables */
+@import url("theme.css");
+
+/* --- Encabezados --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: var(--line-height-heading);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+  display: block;
+}
+
+h1 {
+  font-size: var(--font-size-heading);
+}
+
+h2 {
+  font-size: calc(var(--font-size-heading) - 4px);
+}
+
+h3 {
+  font-size: calc(var(--font-size-heading) - 8px);
+}
+
+h4 {
+  font-size: calc(var(--font-size-heading) - 10px);
+}
+
+h5 {
+  font-size: calc(var(--font-size-heading) - 12px);
+}
+
+h6 {
+  font-size: calc(var(--font-size-heading) - 14px);
+}

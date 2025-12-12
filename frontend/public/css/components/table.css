@@ -1,0 +1,43 @@
+/* Importar Variables */
+@import url("theme.css");
+
+/* Tablas Básicas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-base);
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    border: var(--border-width) solid var(--color-border);
+}
+
+th,
+td {
+    padding: var(--spacing-sm);
+    text-align: left;
+    border: var(--border-width) solid var(--color-border);
+}
+
+th {
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: var(--color-background-alt);
+    /* Variable opcional para filas alternadas */
+}
+
+tr:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-text-secondary);
+    cursor: pointer;
+}
+
+/* Tablas Responsivas */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}

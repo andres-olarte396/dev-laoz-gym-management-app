@@ -1,0 +1,21 @@
+/* Importar Variables */
+@import url("theme.css");
+
+/* Menu */
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 var(--spacing-md);
+}
+
+nav ul li a {
+    color: var(--color-text-primary) !important;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: var(--color-text-accent) !important;
+}

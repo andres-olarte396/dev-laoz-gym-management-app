@@ -1,0 +1,67 @@
+/* Importar Variables */
+@import url("theme.css");
+
+/* Inputs */
+input,
+textarea,
+select {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-base);
+  padding: var(--spacing-xs);
+  margin: var(--spacing-xs);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  width: 98%;
+  transition: border-color 0.3s var(--animation-ease),
+    background-color 0.3s var(--animation-ease);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border: var(--border-width) solid var(--color-accent);
+  outline: none;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border: var(--border-width) solid var(--color-secondary);
+  outline: none;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background-color: var(--color-background-alt);
+  cursor: not-allowed;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin: 0 var(--spacing-xs);
+}
+
+input[type="search"] {
+  max-width: 300px;
+  min-width: 150px;
+}
+
+input[type="color"] {
+  width: 98%;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}

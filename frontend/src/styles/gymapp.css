@@ -1,0 +1,390 @@
+/* ========================================
+   GymApp - Estilos Personalizados
+   Extensión de WaveArtCSS
+   ======================================== */
+
+/* Sidebar de Navegación */
+.gym-sidebar {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--color-border);
+  transition: width var(--animation-duration) var(--animation-ease);
+}
+
+@media (prefers-color-scheme: dark) {
+  .gym-sidebar {
+    background: var(--color-surface); 
+    /* En dark mode, el sidebar suele ser un poco más claro que el fondo o viceversa */
+  }
+}
+
+.gym-sidebar-header {
+  padding: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.gym-sidebar-nav {
+  flex: 1;
+  padding: var(--spacing-md);
+  overflow-y: auto;
+}
+
+.gym-sidebar-footer {
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Botones de Navegación */
+.gym-nav-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+}
+
+.gym-nav-button:hover {
+  background: var(--color-surface);
+  color: var(--color-primary);
+}
+
+.gym-nav-button.active {
+  background: var(--color-primary);
+  color: white; /* Siempre blanco en activo para contraste en primary */
+  box-shadow: var(--box-shadow);
+}
+
+/* Tarjetas de Estadísticas */
+.gym-stat-card {
+  background: var(--color-surface);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--color-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gym-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.gym-stat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+}
+
+.gym-stat-card-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.gym-stat-card-label {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+/* Tablas Mejoradas - Extienden estilos base si los hay */
+.gym-table {
+  width: 100%;
+  background: var(--color-surface);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--color-border);
+  border-collapse: separate; 
+  border-spacing: 0;
+}
+
+.gym-table thead {
+  background: var(--color-background); 
+}
+
+.gym-table th {
+  padding: var(--spacing-md) var(--spacing-lg);
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.gym-table td {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.gym-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.gym-table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.gym-table tbody tr:hover {
+  background-color: var(--color-background); /* Sutil diferencia */
+}
+
+/* Badges */
+.gym-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.gym-badge-primary {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--color-primary);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.gym-badge-success {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--color-success);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.gym-badge-warning {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--color-warning);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.gym-badge-danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--color-error);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.gym-badge-purple {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--color-tertiary);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.gym-badge-gray {
+  background: var(--color-background);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+
+/* Modales */
+.gym-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  backdrop-filter: blur(4px);
+  animation: fadeIn var(--animation-duration) var(--animation-ease);
+}
+
+.gym-modal {
+  background: var(--color-surface);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  max-width: 32rem;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  animation: slideUp var(--animation-duration) var(--animation-ease);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border); /* Sutil borde para dark mode */
+}
+
+.gym-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.gym-modal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.gym-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  color: var(--color-text-secondary);
+  transition: color 0.15s ease;
+  border-radius: var(--border-radius-sm);
+}
+
+.gym-modal-close:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+}
+
+/* Formularios - Integración con WaveArt */
+.gym-form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.gym-form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-xxs);
+}
+
+.gym-form-input, .gym-form-select {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gym-form-input:focus, .gym-form-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Botones */
+.gym-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: filter 0.2s ease, transform 0.1s ease;
+}
+
+.gym-button:active {
+  transform: scale(0.98);
+}
+
+.gym-button-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.gym-button-primary:hover {
+  filter: brightness(110%);
+}
+
+.gym-button-secondary {
+  background: var(--color-background); 
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+
+.gym-button-secondary:hover {
+  background: var(--color-border); /* Un poco más oscuro */
+}
+
+.gym-button-danger {
+  background: var(--color-error);
+  color: white;
+}
+
+.gym-button-danger:hover {
+  filter: brightness(110%);
+}
+
+.gym-button-icon {
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gym-button-icon:hover {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+/* Utilidades Layout */
+.gym-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gym-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gym-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap); 
+}
+
+.gym-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+}
+
+@media (max-width: 768px) {
+  .gym-grid-2,
+  .gym-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animaciones Keyframes (reutilizadas de theme o redefinidas localmente si faltan) */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

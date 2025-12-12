@@ -1,0 +1,42 @@
+/* --- COMPONENTS.CSS --- */
+
+/* Importar Variables */
+@import url("theme.css");
+@import url("components/accordion.css");
+@import url("components/button.css");
+@import url("components/card.css");
+@import url("components/fieldset.css");
+@import url("components/form.css");
+@import url("components/input.css");
+@import url("components/nav.css");
+@import url("components/scrollbar.css");
+@import url("components/table.css");
+
+
+
+/* <div> */
+div {
+  padding: var(--spacing-xs) var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+/* <article> */
+article {
+  padding: var(--spacing-xs) var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* <aside> */
+aside {
+  padding: var(--spacing-xs) var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  font-size: 0.9em;
+}
+
+main {
+  padding: var(--spacing-md);
+}
+
+/* --- THEME.CSS --- */

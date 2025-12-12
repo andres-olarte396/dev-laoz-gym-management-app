@@ -1,0 +1,131 @@
+@import url("theme.css");
+
+/* --- Texto --- */
+article {
+  margin-bottom: var(--spacing-md);
+}
+
+code {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  padding: 0.2rem;
+  border-radius: var(--border-radius);
+}
+
+br,
+hr {
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  margin: var(--spacing-md) 0;
+}
+
+label {
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+  color: var (--color-text-secondary);
+}
+
+pre {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+  margin: var(--spacing-md);
+}
+
+span {
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+}
+
+small {
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+/* menu */
+nav {
+  text-align: center;
+}
+
+/* --- Enlaces --- */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s var(--animation-ease);
+}
+
+a:active {
+  color: var(--color-accent);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+a:visited {
+  color: var(--color-tertiary);
+}
+
+/* Estilos para texto en negrita */
+b {
+  font-weight: bold;
+}
+
+/* Estilos para texto importante */
+strong {
+  font-weight: bolder;
+}
+
+/* Estilos para texto en cursiva */
+i {
+  font-style: italic;
+}
+
+/* Estilos para texto enfatizado */
+em {
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Estilos para texto marcado */
+mark {
+  background-color: var(--color-highlight, yellow);
+  color: var(--color-text-primary);
+}
+
+/* Estilos para texto más pequeño */
+small {
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+/* Estilos para texto eliminado */
+del {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+/* Estilos para texto insertado */
+ins {
+  text-decoration: underline;
+  color: var(--color-text-primary);
+}
+
+/* Estilos para subíndice */
+sub {
+  font-size: smaller;
+  vertical-align: sub;
+}
+
+/* Estilos para superíndice */
+sup {
+  font-size: smaller;
+  vertical-align: super;
+}

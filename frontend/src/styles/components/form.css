@@ -1,0 +1,61 @@
+/* Importar Variables */
+@import url("theme.css");
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin: var(--spacing-md) 0;
+  padding: var(--spacing-md);
+}
+
+form fieldset {
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: calc(var(--spacing-md) * 2);
+}
+
+form label {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+}
+
+form>span {
+  font-size: var(--spacing-md);
+  color: var(--color-text-muted);
+}
+
+form textarea {
+  resize: vertical;
+  min-height: calc(var(--spacing-md) * 10);
+}
+
+form input,
+form select {
+  margin-top: 0 !important;
+  margin-bottom: var(--spacing-md);
+  width: 98%;
+  transition: border-color 0.3s var(--animation-ease),
+    background-color 0.3s var(--animation-ease);
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+form div label {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+form div span {
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
